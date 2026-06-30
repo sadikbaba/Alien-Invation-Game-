@@ -6,7 +6,6 @@ from ship import Ship
 import game_functions as gf
 
 
-
 def run_game():
     """Initialize game and create a screen object"""
     pygame.init()
@@ -21,12 +20,10 @@ def run_game():
     ship = Ship(ai_settings, screen)
     bullets = Group()
     aliens = Group()
-    
 
     # Create the fleet of aliens.
-    
-    gf.create_fleet(ai_settings, screen, aliens)
 
+    gf.create_fleet(ai_settings, screen, aliens)
 
     # start the main loop for the game
     while True:
@@ -35,7 +32,6 @@ def run_game():
 
         gf.update_bullets(bullets)
 
-       
         # clock.tick(390)
 
         gf.update_screen(ai_settings, screen, ship, aliens, bullets)
